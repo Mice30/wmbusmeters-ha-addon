@@ -1,4 +1,52 @@
 {
+  "total_energy_production_tariff_1_kwh":{
+     "component":"sensor",
+     "discovery_payload":{
+        "device":{
+           "identifiers":[
+              "wmbusmeters_{id}"
+           ],
+           "manufacturer":"APATOR",
+           "model":"Electricity meter Apator EMU family (driver: {driver})",
+           "name":"{name}",
+           "hw_version":"{id}"
+        },
+        "name":"total energy production tariff 1 kwh",
+        "unique_id":"wmbusmeters_{id}_{attribute}",
+        "state_topic":"wmbusmeters/{name}",
+        "value_template":"{{ value_json.{attribute} }}",
+        "json_attributes_topic":"wmbusmeters/{name}",
+        "icon":"mdi:transmission-tower-import",
+        "unit_of_measurement":"kWh",
+        "state_class":"total_increasing",
+        "device_class":"energy",
+        "enabled_by_default":true
+     }
+  },
+"total_energy_consumption_tariff_1_kwh":{
+     "component":"sensor",
+     "discovery_payload":{
+        "device":{
+           "identifiers":[
+              "wmbusmeters_{id}"
+           ],
+           "manufacturer":"APATOR",
+           "model":"Electricity meter Apator EMU family (driver: {driver})",
+           "name":"{name}",
+           "hw_version":"{id}"
+        },
+        "name":"total energy consumption tariff 1 kwh",
+        "unique_id":"wmbusmeters_{id}_{attribute}",
+        "state_topic":"wmbusmeters/{name}",
+        "value_template":"{{ value_json.{attribute} }}",
+        "json_attributes_topic":"wmbusmeters/{name}",
+        "icon":"mdi:transmission-tower-import",
+        "unit_of_measurement":"kWh",
+        "state_class":"total_increasing",
+        "device_class":"energy",
+        "enabled_by_default":true
+     }
+  },
   "total_energy_consumption_kwh":{
      "component":"sensor",
      "discovery_payload":{
